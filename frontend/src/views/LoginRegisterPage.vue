@@ -4,10 +4,7 @@
       <div class="inner">
         <div class="signIn" v-if="signIn">
           <div class="top">
-            <img
-              class="logo"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACkCAMAAADlsJGNAAAA7VBMVEUiHh/////sGyM7ODhWU1T7+/s5NjdMSEn+GyMVHh8mHh/YGyP2lZn/+vruMjkAHh5/HSEoJCVkYWLvGyNQTU719PSnpaXV1dWAfX7o5+f2jpL4qKv6yMrpGyNDQEDPzs+Jh4gsKCl0cnLf3t6Vk5ReW1y9vLzwSlHtKzP84OHwr7J4HSHhGyPvPENNHSBfHSCurKz829w3T08eODj+8vLyXWONNDiHKS34lJf1g4f0dnvxUlj6wcPwWF7tQUjpZWvlg4ftoqXGHCKhHCI8HiAvHh8+R0grNTbgSlGUHCFtHSH/ur2sISaERklmeXgnyOFGAAAF/ElEQVR4nO3de1/iRhQG4BA0ioIsclHudw0q67LFdsXbXrq2W9t+/49T5Ca6zMx7ZobklF/e/8nkIclwZpIJTmySdmOr5sVXxjmMrTvFTrfmrW4+k9vGtuFMNnToSLK1TsM4+ZasdY8AOcnItrRuyFFT2joBciLd0LohR4rWcUhR/o2sGZKPW4NIz9C1Q45VrcMQ1aFdL6QovzwpkEaokIKydRjSDRWiPK9xSC1UyJY9iBcqZMceRNX9RZAIEkEiSASJIBEkgkSQCBJBIkgEiSARJIIYQHobAhmcbgYk5Vc3AtLruwebACm57iZAyr67AZDe9YTxP4dUSvfuPGFDPqZV+WUVZDh4Kl357lIsQ1K9ylm5nETzKfnr+Tt5zn/79OojpevR1U2/6r6NRciwPLrxf25Blmp2V50stE1bkGH5lESwHjuQ4Yh2JJhCUtdhK1wrkFtf3cz6Yw7hcDhcC5C7sAWzGEJS9+omgokZhI/DEHKTDXv/FzGCPIS990sxgXzmczyMIGfuZkAqF5wc+pDhASuH29eFMOqwJrnRhIyYOdyRHiSZ5QZ50oLcsuqwntPXmsTu7XNzuGUdSOqUneNK67YCp8pkmn5KB1Kqcjsg98OYBuSMXYf1MNkvKmTA7Xgc3MZ0IMM+L0e/PN8zIuSOk8MfVV72jAZZmjLJSqc7sXlOgylT/660pKBCvkwvkFnz7sW+MP4BFF+8hdWb6t+f3j1cJ58GqTe/CSRI5dnxrHC/fnt3+f7373uCOK3xzyaQWOzREW1jvqk/UrFXnxCFABn6rjtW7P+4/J54vnOREOZR3N6bPIo3MsvK+yNmkD/HB+Pix/sxIiH/gFeEIWE8+TDa3f36l6NUjFOHHWFAkrv7lwlA4TgF3BEC5Kl6jhyMcRoER/CQwd976cQe4uhSHMFD/kmnIYYTz7OG/Jt2MIdzRHIEDVGvFpznA80RLKSlXjw6T4foCBZSUy9VnIW+hD9QCJwdsoMnpIlXJrwhJ3QHSwilMuEMaek4GEI0H+piByEMQXhDCEMQ1hBqZcIVQhqCMIYYvFyIFaQGNsUdkmnrO1hBdCoTjhDtDosbRPcXhB1E9zedHcTJbQpEs+5lCKFPOXCFGPTAzCD6v4nMIPpVCjeIdt3IDqJbyfODaJYqDCF6tQpHiEe7M8IXojUjxBLiHDOH5NTvIJyFPmsa7I2evOq1rYuQa5WAb72pXqS7SJNaqwR9M7SDSqj3egK/Pa1+5+gsxMFJ8E8+5FAJbXASPET5nuZFSBd8CA/V1FEI6ZmBMB5zgp8aqBFqlVDeVKN8ffU8hOdqwnnljvplzbPgtUo4EOWr0ReBa5WQXoKEP5SCDk7UkPha3ub0AYWgE6mhvZYKrlXAiVQ1JAN+JdTVCtL/xVgOVquoIehkAHn9CND0NFCtAmwNnGkiQ+zWKsjXgnUc9KVJ8OAEmUhFIDvQ5a6xWAyvVdR7AJ2o0KyGzjpEuFZRn97Y6CAO1KFaK0Ph2QjlRCq6pcMTVSWqBcmr/5BhFlXfCffmTmb1fzrF483p/yrpLTrGByeKLgc+SyXxDCCEWkV+SsCVgqwJE0isgTYj73LgL0QSMwh+dksHJ3g9LY4hZBt+Pls2ONmGuw1xDCGxtvIPj+aR1Sp4tyWMKYQwkSqpxC1c7cYQKxOpbSPDJOYQfCJVUqvAMxrCWIDYmEjFF9mIYgOCD06EtQpe7ohiA2JjItX4crcCwc8M4XI440NiB2JhItX0KrEEsTCRCg9vVscWxHwi1bDgsgWxMJFqdnJZg+C1uLBWMRpfwRD17Y4G2qZwIhWuEUwgwN0O84lUA8n0iwYgwOQrPjgR1ir6Z1cDhEDrJC0MTrSv+DoIwR7ywydShbVKGz6srzKrrJUQ9AFSWCJZul+Aj+tL5jPMSgh817yOVsKSXjDfIFPmp6oC0iTc/c+jfZesG8x3aCfY4pKT/x1ti/acYh2su+T3gI4aOfS4dF86IicnmFT14t0OfWlIsdDKjT8qT0Z55yRfLxwf5mqeZEtefKuxfLo45H1lmv8AjiK4nKGt2hkAAAAASUVORK5CYII="
-            />
+            <img class="logo" src="../assets/kt-ci.png" alt="Logo" />
             <div class="title">로그인</div>
             <div class="subtitle">
               계정이 없으신가요?
@@ -93,67 +90,61 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import axios from 'axios';
+import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
+import { useAuthStore } from '../stores/auth'; // Pinia store import
 
-axios.defaults.withCredentials = true;
+// Refs and Pinia store setup
+const username = ref('');
+const password = ref('');
+const signIn = ref(true); // To toggle between login/register
+const authStore = useAuthStore();
+const router = useRouter();
 
-export default {
-  data() {
-    return {
-      username: '',
-      password: '',
-      signIn: true, // 로그인/회원가입 폼을 전환하기 위한 플래그
-    };
-  },
-  methods: {
-    // 로그인 요청
-    async login() {
-      try {
-        const response = await axios.post('/auth/login', {
-          username: this.username,
-          password: this.password,
-        });
-        const token = response.data.token;
-        localStorage.setItem('token', token); // 로컬 스토리지에 토큰 저장
-        this.$router.push('/index'); // 로그인 후 페이지 이동
-      } catch (error) {
-        alert(error.response.data);
-      }
-    },
+// Methods for login and register
+const login = async () => {
+  try {
+    const response = await axios.post('/auth/login', {
+      username: username.value,
+      password: password.value,
+    });
+    const token = response.data.token;
 
-    // 회원가입 요청
-    async register() {
-      try {
-        await axios.post('/auth/register', {
-          username: this.username,
-          password: this.password,
-        });
-        alert('Registration successful');
-        this.toggleForm(); // 회원가입 후 로그인 폼으로 전환
-      } catch (error) {
-        alert(error.response.data);
-      }
-    },
-
-    // 로그인/회원가입 폼을 전환
-    toggleForm() {
-      this.signIn = !this.signIn;
-    },
-  },
-
-  computed: {
-    // 유효성 검사: 로그인
-    loginValid() {
-      return this.username.length > 0 && this.password.length > 0;
-    },
-
-    // 유효성 검사: 회원가입
-    registerValid() {
-      return this.username.length > 0 && this.password.length > 0;
-    },
-  },
+    // Save token to Pinia store and localStorage
+    authStore.setToken(token);
+    router.push('/index'); // Navigate to home page after login
+  } catch (error) {
+    alert(error.response.data.message || 'Login failed');
+  }
 };
+
+const register = async () => {
+  try {
+    await axios.post('/auth/register', {
+      username: username.value,
+      password: password.value,
+    });
+    alert('Registration successful');
+    toggleForm(); // Switch back to login form
+  } catch (error) {
+    alert(error.response.data.message || 'Registration failed');
+  }
+};
+
+// Toggle between login and register forms
+const toggleForm = () => {
+  signIn.value = !signIn.value;
+};
+
+// Computed validations for login and register
+const loginValid = computed(
+  () => username.value.length > 0 && password.value.length > 0,
+);
+const registerValid = computed(
+  () => username.value.length > 0 && password.value.length > 0,
+);
 </script>
 
 <!-- Use preprocessors via the lang attribute! e.g. <style lang="scss"> -->
