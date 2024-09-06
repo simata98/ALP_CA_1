@@ -1,0 +1,286 @@
+<div th:fragment="frag_index_content" class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-danger">
+            <div class="card-header">
+              <h3 class="card-title">Donut Chart</h3>
+              <div class="card-tools">
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="collapse"
+                >
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="remove"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas
+                id="donutChart"
+                style="
+                  min-height: 250px;
+                  height: 250px;
+                  max-height: 250px;
+                  max-width: 100%;
+                  display: block;
+                  width: 317px;
+                "
+                width="634"
+                height="500"
+                class="chartjs-render-monitor"
+              ></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-success">
+            <div class="card-header">
+              <h3 class="card-title">Bar Chart</h3>
+              <div class="card-tools">
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="collapse"
+                >
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="remove"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chart">
+                <div class="chartjs-size-monitor">
+                  <div class="chartjs-size-monitor-expand">
+                    <div class=""></div>
+                  </div>
+                  <div class="chartjs-size-monitor-shrink">
+                    <div class=""></div>
+                  </div>
+                </div>
+                <canvas
+                  id="barChart"
+                  style="
+                    min-height: 250px;
+                    height: 250px;
+                    max-height: 250px;
+                    max-width: 100%;
+                    display: block;
+                    width: 317px;
+                  "
+                  width="634"
+                  height="500"
+                  class="chartjs-render-monitor"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">jsGrid</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div id="jsGrid1"></div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <script>
+    // html에 script 삽입, 클라이언트기반에서 차트 동적 시각화 기능
+    // 위치, </body> 닫히기 직전, 기 외의 지점은 로딩 타이밍을 체크해야함
+    // 도넛 차트 : id="donutChart"
+    // 바 차트 : id="barChart"
+    // 테이블 차트 : id="jsGrid1"
+    axios
+      .get("/api/sales")
+      .then(function (response) {
+        // 성공 핸들링
+        let { data } = response;
+        console.log("성공", data);
+        // 정보 추출 => 배열구성
+        // data => 카테고리 배열, 가격 배열, amount만 있는 배열 추출-생성
+        // 또다른배열 = 배열.map(콜백함수)
+        //let categories = data.map( sale => sale.category )
+        //console.log( categories )
+
+        initAllChart(data);
+      })
+      .catch(function (error) {
+        // 에러 핸들링
+        console.log("에러 ", error);
+      })
+      .finally(function () {
+        // 항상 실행되는 영역
+        console.log("통신 완료");
+      });
+
+    // 차트 생성 종합 함수
+    function initAllChart(sales) {
+      // 1. 데이터 파싱 및 추출
+			cates = sales.map( sale => sale.category )
+			prices = sales.map( sale => sale.price )
+			amounts = sales.map( sale => sale.amount )
+			// 데이터 개수만큼 반복하면서 color 생성
+			colors = sales.map( sale => getRandomColor() )
+
+		
+      // 2. 차트 생성
+      // 	2-1. 도넛 차트 구성 함수
+      initDNChart(cates, prices, colors);
+      // 	2-2. 바 차트 구성 함수
+    	initBarChart(cates, amounts);
+      // 	2-3. 테이블 구성 함수
+      initTableChart(sales);
+    }
+		function getRandomColor() {
+			let r = Math.floor(Math.random() * 256)
+			let g = Math.floor(Math.random() * 256)
+			let b = Math.floor(Math.random() * 256)
+			return `rgb(${r}, ${g}, ${b})`;
+		}
+
+    // 차트 만드는 함수
+		function initDNChart( labels, prices, colors ) {
+			//-------------
+			//- DONUT CHART -
+			//-------------
+			// 1. id가 donutChart인 요소의 2d 그래픽 객체를 획득(그리기해야 하므로)
+			var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+			// 2. 데이터 구성(준비)
+			var donutData = {
+				// 카테고리 데이터로 교체
+				labels, // 변수를 객체의 맴버로 바로 적용 가능
+				datasets: [
+					{
+						// 데이터값 (cnt | price | amount)
+						data: prices,
+						// 색상표값 => 랜덤 혹은 의도된 색상 준비 필요(데이터 개수 만큼 )
+						backgroundColor: colors,
+					}
+				]
+			}
+			var donutOptions = {
+				maintainAspectRatio: false,
+				responsive: true,
+			}
+			//Create pie or douhnut chart
+			new Chart(donutChartCanvas, {
+				type: 'doughnut',
+				data: donutData,
+				options: donutOptions
+			})
+		}
+    function initBarChart(sales, areaChartData) {
+			var barChartCanvas = $('#barChart').get(0).getContext('2d')
+			var barChartData = {
+				labels: sales,
+				datasets: [
+					{
+						label               : 'Price',
+						backgroundColor     : 'rgba(60,141,188,0.9)',
+						borderColor         : 'rgba(60,141,188,0.8)',
+						pointRadius         : false,
+						pointColor          : '#3b8bba',
+						pointStrokeColor    : 'rgba(60,141,188,1)',
+						pointHighlightFill  : '#fff',
+						pointHighlightStroke: 'rgba(60,141,188,1)',
+						data                : areaChartData,
+					}
+				]
+			}
+	
+			var barChartOptions = {
+				responsive              : true,
+				maintainAspectRatio     : false,
+				datasetFill             : false,
+			}
+	
+			new Chart(barChartCanvas, {
+				type: 'bar',
+				data: barChartData,
+				options: barChartOptions
+			})
+		}
+
+	
+    function initTableChart(sales) {
+			$("#jsGrid1").jsGrid({
+				height: "100%",
+				width: "100%",
+
+				sorting: true,
+				paging: true,
+
+				data: sales,
+				pageSize: 5,
+				pageButtonCount: 5,
+
+				fields: [
+					{ name: "category", type: "text", width: 150 },
+					{ name: "cnt", type: "number", width: 100 },
+					{ name: "price", type: "number", width: 100 },
+					{ name: "amount", type: "number", width: 100 }
+				]
+		});
+		}
+  </script>
+</div>
+<!-- /.content-wrapper -->

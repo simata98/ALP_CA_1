@@ -1,0 +1,33 @@
+spring:
+    application:
+        name: backend
+    datasource:
+        url: ${DB_HOST}
+        driver-class-name: org.postgresql.Driver
+        username: ${POSTGRES_USER}
+        password: ${POSTGRES_PASSWORD}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate: 
+            format-sql: true
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+    main:
+        allow-bean-definition-overriding: true
+
+springdoc:
+    api-docs:
+        path: /v3/api-docs
+    swagger-ui:
+        path: /swagger-ui.html
+
+langchain4j:
+    open-ai:
+        chatModel:
+            apiKey: ${OPENAI_API_KEY}
+            modelName: gpt-4o
+            logRequests: true
+            logResponses: true
+            
