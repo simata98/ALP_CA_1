@@ -36,6 +36,8 @@ public class SecurityConfig {
         .csrf(csrf -> csrf.disable())
         .authorizeRequests(aythorizeRequests -> aythorizeRequests
             .requestMatchers("/auth/register", "/auth/login").permitAll()
+            .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/swagger-resources/**").permitAll()
+            .requestMatchers("assistant").permitAll()
             .anyRequest().authenticated())
         .addFilterBefore(customAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
         .logout(logout -> logout

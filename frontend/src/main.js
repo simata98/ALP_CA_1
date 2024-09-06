@@ -1,12 +1,16 @@
-import './assets/main.css';
+import '@coreui/coreui/dist/css/coreui.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import CoreuiVue from '@coreui/vue';
+import { iconsSet as icons } from './components/icons';
+import CIcon from '@coreui/icons-vue';
 
 import App from './App.vue';
 import router from './router';
-import vuetify from './plugins/vuetify';
 import axios from 'axios';
+import DocsExample from './components/DocsExample.vue';
 
 // Axios 인터셉터 설정
 axios.interceptors.request.use(
@@ -29,7 +33,9 @@ const app = createApp(App);
 app.config.globalProperties.$axios = axios;
 
 app.use(createPinia());
-app.use(vuetify);
 app.use(router);
-
+app.use(CoreuiVue);
+app.provide('icons', icons);
+app.component('CIcon', CIcon);
+app.component('DocsExample', DocsExample);
 app.mount('#app');

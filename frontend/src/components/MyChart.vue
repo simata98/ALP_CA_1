@@ -9,7 +9,7 @@ import {
   LinearScale,
 } from 'chart.js';
 
-import { Bar } from 'vue-chartjs';
+import { Bar } from '@coreui/vue-chartjs';
 ChartJS.register(
   CategoryScale,
   LinearScale,
