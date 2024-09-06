@@ -47,10 +47,7 @@
 
         <div class="register" v-else>
           <div class="top">
-            <img
-              class="logo"
-              src="https://res.cloudinary.com/dc3c8nrut/image/upload/v1685298768/logo-placeholder_l3yodl.png"
-            />
+            <img class="logo" src="../assets/kt-ci.png" />
             <div class="title">계정 만들기</div>
             <div class="subtitle">
               이미 계정을 만들었나요?
