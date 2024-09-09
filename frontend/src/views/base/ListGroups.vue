@@ -92,9 +92,7 @@
               <CListGroupItem as="a" href="#">
                 Dapibus ac facilisis in
               </CListGroupItem>
-              <CListGroupItem as="a" href="#">
-                Morbi leo risus
-              </CListGroupItem>
+              <CListGroupItem as="a" href="#"> Morbi leo risus </CListGroupItem>
               <CListGroupItem as="a" href="#">
                 Porta ac consectetur ac
               </CListGroupItem>

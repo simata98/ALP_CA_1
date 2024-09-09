@@ -38,6 +38,7 @@ public class SecurityConfig {
             .requestMatchers("/auth/register", "/auth/login").permitAll()
             .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html", "/swagger-resources/**").permitAll()
             .requestMatchers("assistant").permitAll()
+            .requestMatchers("/api/executeQuery").permitAll()
             .anyRequest().authenticated())
         .addFilterBefore(customAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
         .logout(logout -> logout

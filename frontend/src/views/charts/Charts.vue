@@ -6,7 +6,7 @@ import {
   CChartRadarExample,
   CChartPieExample,
   CChartPolarAreaExample,
-} from './index.js'
+} from './index.js';
 </script>
 
 <template>

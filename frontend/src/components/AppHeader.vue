@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 import { useColorModes } from '@coreui/vue';
 import { useAuthStore } from '../stores/auth';
 
-const headerClassNames = ref('mb-4 p-0');
+const headerClassNames = ref('mb-0 p-0');
 const { colorMode, setColorMode } = useColorModes(
   'coreui-free-vue-admin-template-theme',
 );

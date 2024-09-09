@@ -11,6 +11,7 @@ import App from './App.vue';
 import router from './router';
 import axios from 'axios';
 import DocsExample from './components/DocsExample.vue';
+import './index.css';
 
 // Axios 인터셉터 설정
 axios.interceptors.request.use(

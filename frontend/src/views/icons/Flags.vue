@@ -1,8 +1,9 @@
 <script setup>
-import { flagSet } from '@coreui/icons'
+import { flagSet } from '@coreui/icons';
 
-const toKebabCase = (str) => str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase()
-const icons = flagSet
+const toKebabCase = str =>
+  str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase();
+const icons = flagSet;
 </script>
 
 <template>

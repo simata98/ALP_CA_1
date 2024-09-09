@@ -1,4 +1,19 @@
 <template>
+  <!-- CToast for notifications -->
+  <CToaster class="p-3" placement="top-center">
+    <CToast
+      v-if="toastVisible"
+      :autohide="false"
+      :color="toastColor"
+      class="text-white align-items-center"
+      visible
+    >
+      <div class="d-flex">
+        <CToastBody>{{ toastMessage }}</CToastBody>
+        <CToastClose class="me-2 m-auto" white @click="toastVisible = false" />
+      </div>
+    </CToast>
+  </CToaster>
   <div id="app">
     <div class="loginBox">
       <div class="inner">
@@ -92,6 +107,7 @@ import axios from 'axios';
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/auth'; // Pinia store import
+import { CToaster } from '@coreui/vue';
 
 // Refs and Pinia store setup
 const username = ref('');
@@ -99,6 +115,11 @@ const password = ref('');
 const signIn = ref(true); // To toggle between login/register
 const authStore = useAuthStore();
 const router = useRouter();
+
+// Toast states
+const toastVisible = ref(false);
+const toastMessage = ref('');
+const toastColor = ref('');
 
 // Methods for login and register
 const login = async () => {
@@ -111,9 +132,18 @@ const login = async () => {
 
     // Save token to Pinia store and localStorage
     authStore.setToken(token);
-    router.push('/index'); // Navigate to home page after login
+    toastMessage.value = '로그인 성공!';
+    toastColor.value = 'primary';
+    toastVisible.value = true;
+
+    setTimeout(() => {
+      router.push('/index'); // Navigate to home page after login
+      toastVisible.value = false;
+    }, 2000);
   } catch (error) {
-    alert(error.response.data.message || 'Login failed');
+    toastMessage.value = error.response?.data?.message || '로그인 실패';
+    toastColor.value = 'danger';
+    toastVisible.value = true;
   }
 };
 
@@ -123,10 +153,18 @@ const register = async () => {
       username: username.value,
       password: password.value,
     });
-    alert('Registration successful');
-    toggleForm(); // Switch back to login form
+    toastMessage.value = '회원가입 성공!';
+    toastColor.value = 'primary';
+    toastVisible.value = true;
+
+    setTimeout(() => {
+      toggleForm(); // Switch back to login form
+      toastVisible.value = false;
+    }, 2000);
   } catch (error) {
-    alert(error.response.data.message || 'Registration failed');
+    toastMessage.value = error.response?.data?.message || '회원가입 실패';
+    toastColor.value = 'danger';
+    toastVisible.value = true;
   }
 };
 

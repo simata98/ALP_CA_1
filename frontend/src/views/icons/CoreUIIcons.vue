@@ -1,8 +1,9 @@
 <script setup>
-import { freeSet } from '@coreui/icons'
+import { freeSet } from '@coreui/icons';
 
-const toKebabCase = (str) => str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase()
-const icons = freeSet
+const toKebabCase = str =>
+  str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase();
+const icons = freeSet;
 </script>
 
 <template>

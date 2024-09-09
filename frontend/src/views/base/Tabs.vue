@@ -7,8 +7,9 @@
         </CCardHeader>
         <CCardBody>
           <p class="text-body-secondary small">
-            The basic Vue tabs example uses the <code>variant=&#34;tabs&#34;</code> props to
-            generate a tabbed interface.
+            The basic Vue tabs example uses the
+            <code>variant=&#34;tabs&#34;</code> props to generate a tabbed
+            interface.
           </p>
           <DocsExample href="components/tabs.html#example">
             <CTabs activeItemKey="profile">
@@ -19,10 +20,18 @@
                 <CTab disabled itemKey="disabled"> Disabled </CTab>
               </CTabList>
               <CTabContent>
-                <CTabPanel class="p-3" itemKey="home"> Home tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="profile"> Profile tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="contact"> Contact tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="disabled"> Disabled tab content </CTabPanel>
+                <CTabPanel class="p-3" itemKey="home">
+                  Home tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="profile">
+                  Profile tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="contact">
+                  Contact tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="disabled">
+                  Disabled tab content
+                </CTabPanel>
               </CTabContent>
             </CTabs>
           </DocsExample>
@@ -31,11 +40,13 @@
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
-        <CCardHeader> <strong>Vue Tabs</strong> <small>Unstyled</small> </CCardHeader>
+        <CCardHeader>
+          <strong>Vue Tabs</strong> <small>Unstyled</small>
+        </CCardHeader>
         <CCardBody>
           <p class="text-body-secondary small">
-            If you don’t provide the <code>variant</code> prop, the component will default to a
-            basic style.
+            If you don’t provide the <code>variant</code> prop, the component
+            will default to a basic style.
           </p>
           <DocsExample href="components/tabs.html#unstyled">
             <CTabs activeItemKey="profile">
@@ -46,10 +57,18 @@
                 <CTab disabled itemKey="disabled"> Disabled </CTab>
               </CTabList>
               <CTabContent>
-                <CTabPanel class="p-3" itemKey="home"> Home tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="profile"> Profile tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="contact"> Contact tab content </CTabPanel>
-                <CTabPanel class="p-3" itemKey="disabled"> Disabled tab content </CTabPanel>
+                <CTabPanel class="p-3" itemKey="home">
+                  Home tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="profile">
+                  Profile tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="contact">
+                  Contact tab content
+                </CTabPanel>
+                <CTabPanel class="p-3" itemKey="disabled">
+                  Disabled tab content
+                </CTabPanel>
               </CTabContent>
             </CTabs>
           </DocsExample>
@@ -58,30 +77,55 @@
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
-        <CCardHeader> <strong>Vue Tabs</strong> <small>Pills</small> </CCardHeader>
+        <CCardHeader>
+          <strong>Vue Tabs</strong> <small>Pills</small>
+        </CCardHeader>
         <CCardBody>
           <p class="text-body-secondary small">
-            Take that same code, but use <code>variant=&#34;pills&#34;</code> instead:
+            Take that same code, but use
+            <code>variant=&#34;pills&#34;</code> instead:
           </p>
           <DocsExample href="components/tabs.html#unstyled">
             <CTabs :activeItemKey="2">
               <CTabList variant="pills">
                 <CTab aria-controls="home-tab-pane" :itemKey="1"> Home </CTab>
-                <CTab aria-controls="profile-tab-pane" :itemKey="2"> Profile </CTab>
-                <CTab aria-controls="contact-tab-pane" :itemKey="3"> Contact </CTab>
-                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4"> Disabled </CTab>
+                <CTab aria-controls="profile-tab-pane" :itemKey="2">
+                  Profile
+                </CTab>
+                <CTab aria-controls="contact-tab-pane" :itemKey="3">
+                  Contact
+                </CTab>
+                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4">
+                  Disabled
+                </CTab>
               </CTabList>
               <CTabContent>
-                <CTabPanel class="p-3" aria-labelledby="home-tab-pane" :itemKey="1">
+                <CTabPanel
+                  class="p-3"
+                  aria-labelledby="home-tab-pane"
+                  :itemKey="1"
+                >
                   Home tab content
                 </CTabPanel>
-                <CTabPanel class="p-3" aria-labelledby="profile-tab-pane" :itemKey="2">
+                <CTabPanel
+                  class="p-3"
+                  aria-labelledby="profile-tab-pane"
+                  :itemKey="2"
+                >
                   Profile tab content
                 </CTabPanel>
-                <CTabPanel class="p-3" aria-labelledby="contact-tab-pane" :itemKey="3">
+                <CTabPanel
+                  class="p-3"
+                  aria-labelledby="contact-tab-pane"
+                  :itemKey="3"
+                >
                   Contact tab content
                 </CTabPanel>
-                <CTabPanel class="p-3" aria-labelledby="disabled-tab-pane" :itemKey="4">
+                <CTabPanel
+                  class="p-3"
+                  aria-labelledby="disabled-tab-pane"
+                  :itemKey="4"
+                >
                   Disabled tab content
                 </CTabPanel>
               </CTabContent>
@@ -92,30 +136,55 @@
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
-        <CCardHeader> <strong>Vue Tabs</strong> <small>Underline</small> </CCardHeader>
+        <CCardHeader>
+          <strong>Vue Tabs</strong> <small>Underline</small>
+        </CCardHeader>
         <CCardBody>
           <p class="text-body-secondary small">
-            Take that same code, but use <code>variant=&#34;underline&#34;</code> instead:
+            Take that same code, but use
+            <code>variant=&#34;underline&#34;</code> instead:
           </p>
           <DocsExample href="components/tabs.html#unstyled">
             <CTabs :activeItemKey="2">
               <CTabList variant="underline">
                 <CTab aria-controls="home-tab-pane" :itemKey="1"> Home </CTab>
-                <CTab aria-controls="profile-tab-pane" :itemKey="2"> Profile </CTab>
-                <CTab aria-controls="contact-tab-pane" :itemKey="3"> Contact </CTab>
-                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4"> Disabled </CTab>
+                <CTab aria-controls="profile-tab-pane" :itemKey="2">
+                  Profile
+                </CTab>
+                <CTab aria-controls="contact-tab-pane" :itemKey="3">
+                  Contact
+                </CTab>
+                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4">
+                  Disabled
+                </CTab>
               </CTabList>
               <CTabContent>
-                <CTabPanel class="py-3" aria-labelledby="home-tab-pane" :itemKey="1">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="home-tab-pane"
+                  :itemKey="1"
+                >
                   Home tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="profile-tab-pane" :itemKey="2">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="profile-tab-pane"
+                  :itemKey="2"
+                >
                   Profile tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="contact-tab-pane" :itemKey="3">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="contact-tab-pane"
+                  :itemKey="3"
+                >
                   Contact tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="disabled-tab-pane" :itemKey="4">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="disabled-tab-pane"
+                  :itemKey="4"
+                >
                   Disabled tab content
                 </CTabPanel>
               </CTabContent>
@@ -126,30 +195,55 @@
     </CCol>
     <CCol :xs="12">
       <CCard class="mb-4">
-        <CCardHeader> <strong>Vue Tabs</strong> <small>Underline border</small> </CCardHeader>
+        <CCardHeader>
+          <strong>Vue Tabs</strong> <small>Underline border</small>
+        </CCardHeader>
         <CCardBody>
           <p class="text-body-secondary small">
-            Take that same code, but use <code>variant=&#34;underline-border&#34;</code> instead:
+            Take that same code, but use
+            <code>variant=&#34;underline-border&#34;</code> instead:
           </p>
           <DocsExample href="components/tabs.html#unstyled">
             <CTabs :activeItemKey="2">
               <CTabList variant="underline-border">
                 <CTab aria-controls="home-tab-pane" :itemKey="1"> Home </CTab>
-                <CTab aria-controls="profile-tab-pane" :itemKey="2"> Profile </CTab>
-                <CTab aria-controls="contact-tab-pane" :itemKey="3"> Contact </CTab>
-                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4"> Disabled </CTab>
+                <CTab aria-controls="profile-tab-pane" :itemKey="2">
+                  Profile
+                </CTab>
+                <CTab aria-controls="contact-tab-pane" :itemKey="3">
+                  Contact
+                </CTab>
+                <CTab aria-controls="disabled-tab-pane" disabled :itemKey="4">
+                  Disabled
+                </CTab>
               </CTabList>
               <CTabContent>
-                <CTabPanel class="py-3" aria-labelledby="home-tab-pane" :itemKey="1">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="home-tab-pane"
+                  :itemKey="1"
+                >
                   Home tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="profile-tab-pane" :itemKey="2">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="profile-tab-pane"
+                  :itemKey="2"
+                >
                   Profile tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="contact-tab-pane" :itemKey="3">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="contact-tab-pane"
+                  :itemKey="3"
+                >
                   Contact tab content
                 </CTabPanel>
-                <CTabPanel class="py-3" aria-labelledby="disabled-tab-pane" :itemKey="4">
+                <CTabPanel
+                  class="py-3"
+                  aria-labelledby="disabled-tab-pane"
+                  :itemKey="4"
+                >
                   Disabled tab content
                 </CTabPanel>
               </CTabContent>

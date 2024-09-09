@@ -1,7 +1,7 @@
 <script setup>
-import AngularImg from '@/assets/images/angular.jpg'
-import ReactImg from '@/assets/images/react.jpg'
-import VueImg from '@/assets/images/vue.jpg'
+import AngularImg from '@/assets/images/angular.jpg';
+import ReactImg from '@/assets/images/react.jpg';
+import VueImg from '@/assets/images/vue.jpg';
 </script>
 
 <template>
@@ -12,9 +12,7 @@ import VueImg from '@/assets/images/vue.jpg'
           <strong>Vue Carousels</strong> <small>Slide only</small>
         </CCardHeader>
         <CCardBody>
-          <p class="text-body-secondary small">
-            Here’s a carousel with slides
-          </p>
+          <p class="text-body-secondary small">Here’s a carousel with slides</p>
           <DocsExample href="components/carousel.html#slides-only">
             <CCarousel>
               <CCarouselItem>

@@ -9,7 +9,7 @@ const data = {
       data: [40, 20, 80, 10],
     },
   ],
-}
+};
 </script>
 
 <template>

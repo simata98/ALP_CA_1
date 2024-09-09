@@ -6,7 +6,23 @@ import WidgetsStatsA from './WidgetsStatsTypeA.vue';
 import WidgetsStatsD from './WidgetsStatsTypeD.vue';
 
 const widgetStatsE = {
-  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M'],
+  labels: [
+    'M',
+    'T',
+    'W',
+    'T',
+    'F',
+    'S',
+    'S',
+    'M',
+    'T',
+    'W',
+    'T',
+    'F',
+    'S',
+    'S',
+    'M',
+  ],
   optionsBar: {
     maintainAspectRatio: false,
     plugins: {
@@ -47,7 +63,7 @@ const widgetStatsE = {
       },
     },
   },
-}
+};
 </script>
 
 <template>
@@ -150,7 +166,10 @@ const widgetStatsE = {
                       backgroundColor: getStyle('--cui-danger'),
                       borderColor: 'transparent',
                       borderWidth: 1,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -171,7 +190,10 @@ const widgetStatsE = {
                       backgroundColor: getStyle('--cui-primary'),
                       borderColor: 'transparent',
                       borderWidth: 1,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -192,7 +214,10 @@ const widgetStatsE = {
                       backgroundColor: getStyle('--cui-warning'),
                       borderColor: 'transparent',
                       borderWidth: 1,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -213,7 +238,10 @@ const widgetStatsE = {
                       backgroundColor: 'transparent',
                       borderColor: getStyle('--cui-success'),
                       borderWidth: 2,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -234,7 +262,10 @@ const widgetStatsE = {
                       backgroundColor: 'transparent',
                       borderColor: getStyle('--cui-warning'),
                       borderWidth: 2,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -255,7 +286,10 @@ const widgetStatsE = {
                       backgroundColor: 'transparent',
                       borderColor: getStyle('--cui-info'),
                       borderWidth: 2,
-                      data: [41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45, 47],
+                      data: [
+                        41, 78, 51, 66, 74, 42, 89, 97, 87, 84, 78, 88, 67, 45,
+                        47,
+                      ],
                     },
                   ],
                 }"
@@ -376,28 +410,48 @@ const widgetStatsE = {
       <DocsExample href="components/widgets.html#widgetstatsf">
         <CRow :xs="{ gutter: 4 }">
           <CCol :sm="6" :xl="4" :xxl="3">
-            <CWidgetStatsF color="primary" :padding="false" title="Title" value="$1.999,50">
+            <CWidgetStatsF
+              color="primary"
+              :padding="false"
+              title="Title"
+              value="$1.999,50"
+            >
               <template #icon>
                 <CIcon icon="cil-settings" size="xl" />
               </template>
             </CWidgetStatsF>
           </CCol>
           <CCol :sm="6" :xl="4" :xxl="3">
-            <CWidgetStatsF color="info" :padding="false" title="Title" value="$1.999,50">
+            <CWidgetStatsF
+              color="info"
+              :padding="false"
+              title="Title"
+              value="$1.999,50"
+            >
               <template #icon>
                 <CIcon icon="cil-user" size="xl" />
               </template>
             </CWidgetStatsF>
           </CCol>
           <CCol :sm="6" :xl="4" :xxl="3">
-            <CWidgetStatsF color="warning" :padding="false" title="Title" value="$1.999,50">
+            <CWidgetStatsF
+              color="warning"
+              :padding="false"
+              title="Title"
+              value="$1.999,50"
+            >
               <template #icon>
                 <CIcon icon="cil-moon" size="xl" />
               </template>
             </CWidgetStatsF>
           </CCol>
           <CCol :sm="6" :xl="4" :xxl="3">
-            <CWidgetStatsF color="danger" :padding="false" title="Title" value="$1.999,50">
+            <CWidgetStatsF
+              color="danger"
+              :padding="false"
+              title="Title"
+              value="$1.999,50"
+            >
               <template #icon>
                 <CIcon icon="cil-bell" size="xl" />
               </template>
@@ -410,7 +464,11 @@ const widgetStatsE = {
       </DocsExample>
       <DocsExample href="components/widgets.html#widgetstatsc">
         <CCardGroup>
-          <CWidgetStatsC :progress="{ color: 'info', value: 75 }" title="Visitors" value="87.500">
+          <CWidgetStatsC
+            :progress="{ color: 'info', value: 75 }"
+            title="Visitors"
+            value="87.500"
+          >
             <template #icon><CIcon icon="cil-people" height="36" /></template>
           </CWidgetStatsC>
           <CWidgetStatsC
@@ -418,7 +476,9 @@ const widgetStatsE = {
             title="New Clients"
             value="385"
           >
-            <template #icon><CIcon icon="cil-user-follow" height="36" /></template>
+            <template #icon
+              ><CIcon icon="cil-user-follow" height="36"
+            /></template>
           </CWidgetStatsC>
           <CWidgetStatsC
             :progress="{ color: 'warning', value: 75 }"
@@ -432,21 +492,29 @@ const widgetStatsE = {
             title="Returning Visitors"
             value="28%"
           >
-            <template #icon><CIcon icon="cil-chart-pie" height="36" /></template>
+            <template #icon
+              ><CIcon icon="cil-chart-pie" height="36"
+            /></template>
           </CWidgetStatsC>
           <CWidgetStatsC
             :progress="{ color: 'danger', value: 75 }"
             title="Avg. Time"
             value="5:34:11"
           >
-            <template #icon><CIcon icon="cil-speedometer" height="36" /></template>
+            <template #icon
+              ><CIcon icon="cil-speedometer" height="36"
+            /></template>
           </CWidgetStatsC>
         </CCardGroup>
       </DocsExample>
       <DocsExample href="components/widgets.html#widgetstatsc">
         <CRow :xs="{ gutter: 4 }">
           <CCol :xs="6" :lg="4" :xxl="2">
-            <CWidgetStatsC :progress="{ color: 'info', value: 75 }" title="Visitors" value="87.500">
+            <CWidgetStatsC
+              :progress="{ color: 'info', value: 75 }"
+              title="Visitors"
+              value="87.500"
+            >
               <template #icon><CIcon icon="cil-people" height="36" /></template>
             </CWidgetStatsC>
           </CCol>
@@ -456,7 +524,9 @@ const widgetStatsE = {
               title="New Clients"
               value="385"
             >
-              <template #icon><CIcon icon="cil-user-follow" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-user-follow" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
@@ -474,7 +544,9 @@ const widgetStatsE = {
               title="Returning Visitors"
               value="28%"
             >
-              <template #icon><CIcon icon="cil-chart-pie" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-chart-pie" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
@@ -483,11 +555,17 @@ const widgetStatsE = {
               title="Avg. Time"
               value="5:34:11"
             >
-              <template #icon><CIcon icon="cil-speedometer" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-speedometer" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
-            <CWidgetStatsC :progress="{ color: 'info', value: 75 }" title="Comments" value="972">
+            <CWidgetStatsC
+              :progress="{ color: 'info', value: 75 }"
+              title="Comments"
+              value="972"
+            >
               <template #icon><CIcon icon="cil-speech" height="36" /></template>
             </CWidgetStatsC>
           </CCol>
@@ -514,7 +592,9 @@ const widgetStatsE = {
               title="New Clients"
               value="385"
             >
-              <template #icon><CIcon icon="cil-user-follow" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-user-follow" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
@@ -536,7 +616,9 @@ const widgetStatsE = {
               title="Returning Visitors"
               value="28%"
             >
-              <template #icon><CIcon icon="cil-chart-pie" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-chart-pie" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
@@ -547,7 +629,9 @@ const widgetStatsE = {
               title="Avg. Time"
               value="5:34:11"
             >
-              <template #icon><CIcon icon="cil-speedometer" height="36" /></template>
+              <template #icon
+                ><CIcon icon="cil-speedometer" height="36"
+              /></template>
             </CWidgetStatsC>
           </CCol>
           <CCol :xs="6" :lg="4" :xxl="2">
