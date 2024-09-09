@@ -264,11 +264,7 @@
             that fills the available width starting from the small breakpoint.
           </p>
           <DocsExample href="components/nav.html#working-with-flex-utilities">
-            <CNav
-              as="nav"
-              variant="pills"
-              class="flex-column flex-sm-row"
-            >
+            <CNav as="nav" variant="pills" class="flex-column flex-sm-row">
               <CNavLink href="#" active> Active </CNavLink>
               <CNavLink href="#">Link</CNavLink>
               <CNavLink href="#">Link</CNavLink>

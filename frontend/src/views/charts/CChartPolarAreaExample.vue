@@ -2,7 +2,15 @@
 import { CChartPolarArea } from '@coreui/vue-chartjs';
 
 const data = {
-  labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+  labels: [
+    'Eating',
+    'Drinking',
+    'Sleeping',
+    'Designing',
+    'Coding',
+    'Cycling',
+    'Running',
+  ],
   datasets: [
     {
       label: 'My First dataset',
@@ -26,7 +34,7 @@ const data = {
   options: {
     aspectRatio: 1.5,
   },
-}
+};
 </script>
 
 <template>

@@ -1,4 +1,3 @@
-
 <template>
   <CRow>
     <CCol :xs="12">

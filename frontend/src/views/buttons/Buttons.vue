@@ -126,24 +126,9 @@
               Link
             </CButton>
             <CButton type="submit" color="primary"> Button </CButton>
-            <CButton
-              as="input"
-              type="button"
-              color="primary"
-              value="Input"
-            />
-            <CButton
-              as="input"
-              type="submit"
-              color="primary"
-              value="Submit"
-            />
-            <CButton
-              as="input"
-              type="reset"
-              color="primary"
-              value="Reset"
-            />
+            <CButton as="input" type="button" color="primary" value="Input" />
+            <CButton as="input" type="submit" color="primary" value="Submit" />
+            <CButton as="input" type="reset" color="primary" value="Reset" />
           </DocsExample>
         </CCardBody>
       </CCard>
@@ -362,13 +347,7 @@
             <CButton as="a" href="#" color="primary" size="lg" disabled>
               Primary link
             </CButton>
-            <CButton
-              as="a"
-              href="#"
-              color="secondary"
-              size="lg"
-              disabled
-            >
+            <CButton as="a" href="#" color="secondary" size="lg" disabled>
               Link
             </CButton>
           </DocsExample>

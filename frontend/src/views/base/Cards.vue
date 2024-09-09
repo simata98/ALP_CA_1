@@ -1,6 +1,5 @@
-
 <script setup>
-import VueImg from '@/assets/images/vue.jpg'
+import VueImg from '@/assets/images/vue.jpg';
 </script>
 
 <template>

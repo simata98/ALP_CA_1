@@ -6,7 +6,15 @@
 import { CChartRadar } from '@coreui/vue-chartjs';
 
 const data = {
-  labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+  labels: [
+    'Eating',
+    'Drinking',
+    'Sleeping',
+    'Designing',
+    'Coding',
+    'Cycling',
+    'Running',
+  ],
   datasets: [
     {
       label: '2020',
@@ -34,5 +42,5 @@ const data = {
   options: {
     aspectRatio: 1.5,
   },
-}
+};
 </script>
