@@ -24,9 +24,9 @@ const login = () => {
 onMounted(() => {
   document.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > 0) {
-      headerClassNames.value = 'mb-4 p-0 shadow-sm';
+      headerClassNames.value = 'mb-0 p-0 shadow-sm';
     } else {
-      headerClassNames.value = 'mb-4 p-0';
+      headerClassNames.value = 'mb-0 p-0';
     }
   });
 });
