@@ -1,11 +1,14 @@
 import os
 import sys
+import json
 from langchain_community.utilities.sql_database import SQLDatabase
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 from langchain import hub
 from langgraph.prebuilt import create_react_agent
+import warnings
+warnings.filterwarnings('ignore')
 
 def get_user_settings():
   """DB, API 세팅을 환경설정 합니다."""
@@ -72,34 +75,3 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"An error occurred: {e}")
 
-
-# Prompt template (Langsmith 배포)
-"""
-You are an agent designed to interact with a SQL database.
-
-Given an input question, create a syntactically correct {dialect} query to run, then look at the results of the query and return the answer.
-
-Unless the user specifies a specific number of examples they wish to obtain, always limit your query to at most {top_k} results.
-
-You can order the results by a relevant column to return the most interesting examples in the database.
-
-Never query for all the columns from a specific table, only ask for the relevant columns given the question.
-
-You have access to tools for interacting with the database.
-
-Only use the below tools. Only use the information returned by the below tools to construct your final answer.
-
-You MUST double check your query before executing it. If you get an error while executing a query, rewrite the query and try again.
-
-DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database.
-
-To start you should ALWAYS look at the tables in the database to see what you can query.
-
-Do NOT skip this step.
-
-Then you should query the schema of the most relevant tables.
-
-"""
-
-
-  
