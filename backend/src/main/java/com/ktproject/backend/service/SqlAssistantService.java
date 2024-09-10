@@ -24,13 +24,13 @@ public class SqlAssistantService {
           .redirectOutput(new LogOutputStream() {
             @Override
             protected void processLine(String line) {
-              output.append(line).append("/n");
+              output.append(line).append("\n");
             }
           })
           .redirectError(new LogOutputStream() {
             @Override
             protected void processLine(String line) {
-              output.append("Error: ").append(line).append("/n");
+              output.append("Error: ").append(line).append("\n");
             }
           })
           .execute();
